@@ -90,7 +90,7 @@ header {
     background-color: #EF6C00;
     height: 30px;
     width: 30px;
-    border-radius: 50%; - /* makes it a circle */
+    border-radius: 50%; /* makes it a circle */
     text-align: center;
     line-height: 30px;
 }
@@ -166,6 +166,7 @@ input[type=button], input[type=submit] {
 
 .search-btns {
     padding-top: 25px;
+    box-align: center;
 }
 
 input[type=button], input[type=submit]:hover {
