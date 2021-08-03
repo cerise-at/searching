@@ -1,0 +1,11 @@
+{
+  "name": "cerise_and_simon",
+  "version": "1.0.0",
+  "description": "Search engine ",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Cerise and Simon",
+  "license": "ISC"
+}
