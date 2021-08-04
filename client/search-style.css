@@ -1,0 +1,160 @@
+body {
+    min-height: 100%;
+    position: relative;
+}
+
+#topbar {
+    display: flex;
+    height: 64px;
+    width: 100%;
+    align-items: flex-end;
+    position: fixed;
+    background-color: white;
+}
+
+.logo-img {
+    height: 40px;
+    margin-left: 30px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.search-bar {
+    border: 1px solid lightgray;
+    box-shadow: 0px 0px 4px 0px #B5B5B5;
+    width: 600px;
+    height: 1em;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 0px;
+    margain-top:
+}
+
+.search-bar span {
+    color: rgb(16, 120, 255);
+    align-items: flex-start;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    height: 30px;
+    margin-right: 15px;
+    font-size: 16px;
+    border: none;
+}
+
+.search-bar input:focus {
+    outline: none;
+}
+
+#optionsbar {
+    width: 100%;
+    height: 50px;
+    border-width: 0px;
+    border-bottom: 1px;
+    border-color: lightgray;
+    border-style: solid;
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: rgb(112, 112, 112);
+    padding-top: 64px;
+}
+
+.optionsmenu1 {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 150px;
+}
+
+.optionsmenu1 li {
+    padding: 0px 10px 15px 20px;
+}
+
+.optionsmenuactive {
+    color: #4285F4;
+    font-weight: bold;
+    position: relative;
+    z-index: -1;
+}
+
+.optionsmenuactive::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #4285F4;
+    left: 5px;
+    bottom: 0px;
+}
+
+.optionsmenu2 {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 100px;
+}
+
+.optionsmenu2 li {
+    padding: 0px 10px 15px 20px;
+}
+
+#searchresultsarea {
+    margin-left: 150px;
+    font-family: 'Arial';
+}
+
+/* CSS for formatting search results should go here */
+
+#footer {
+    background-color: rgb(238, 238, 238);
+    position: absolute;
+    margin-top: auto;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    font-size: 13px;
+    font-family: 'arial';
+    color: rgb(85, 85, 85);
+}
+
+.footerlocation {
+    display: flex;
+    direction: row;
+    margin-left: 175px;
+    position: relative;
+    top: -5px;
+}
+
+.footerlocation p:nth-of-type(1) {
+    font-weight: bold;
+}
+
+.footermenu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    margin-left: 135px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+}
+
+.footermenu li {
+    padding-right: 30px;
+}
