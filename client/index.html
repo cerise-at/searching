@@ -14,10 +14,10 @@
     <section>
         <h1>Foogle</h1>
     </section>
-    <form id="form" onsubmit="searchHandler(event)">
+    <form id="form" onsubmit="handleSubmitReload(event)">
         <input id="searchInput" type="text" placeholder="what are you looking for?">
-        <input type="submit" value="search">
-        <input type="button" value="take me straight there">
+        <input id="submit" type="submit" value="search">
+        <input id="feelingLucky" type="button" onclick="luckyWebsiteReroute(event)" value="take me straight there">
     </form>
     <footer>
         <p>about the site</p>
