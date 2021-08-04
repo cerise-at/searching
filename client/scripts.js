@@ -15,18 +15,31 @@ function searchHandler(event){
 }
 
 function sortResults(data) {
-    //check data is there
-    console.log(data);
     //loop over first 10 results
-    for(let i=0; i< 10; i++) {
-        //give result a new id
-        let a = data.items[i].cacheId
-            console.log('a is'+ a)
+    for(let i=0; i< 10; i++) 
+    {
+        //see if it has a cahce id:
+        if (data.items[i].cacheId = true)
+        {
+        //give result a name from cacheId
+            let a = data.items[i].cacheId
+            
             //make it a new class and add the data
             a = new Result(`${data.items[i].title}`, `${data.items[i].snippet}`, `${data.items[i].formattedUrl}`);
-    }
-
+            finalResults[i] = a
+            console.log(finalResults);
+        // give Result a name from metadata
+        } else {
+            let b = data.items[i].pagemap.thing.name
+            //make new class and add data
+            b = new Result(`${data.items[i].title}`, `${data.items[i].snippet}`, `${data.items[i].formattedUrl}`);
+            //add results object to final result object
+            finalResults[i] = b
+        }
+      
+    } 
 }
+
 // class to put results in 
 class Result {
     constructor(title, snippet, formattedUrl){
@@ -35,9 +48,10 @@ class Result {
     this.formattedUrl = formattedUrl
     }
 }
+
 //at some point put the objects all into this object so that we can export it to the html file all in one go 
 //at the moment they are in ten seperate objects!
-let finalResults = {   }
+let finalResults = {}
 
 //keys for search
 let cx = '6bec81dadc88ed1d3'
@@ -46,3 +60,4 @@ let API_KEY = 'AIzaSyBLQ6G4cY74__pZ0pfUiBV7qlBgxbssheo'
 //watch for submission of form
 const form = document.getElementById('form');
 form.addEventListener('submit', searchHandler);
+
