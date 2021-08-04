@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -5,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Google Font Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="icon" href="./images/favicon.jpg">
     <link rel="stylesheet" href="styles.css" /> 
+    <script src="./scripts.js" defer></script>
     <!-- API -->
     <title>Google Clone Foolgle</title>
   </head>
@@ -40,15 +41,15 @@
     <!-- Content -->
     <section class="content-section">
         <div class="content-wrapper">
-            <img class="logo-img" src="./images/Foolgle.png" alt="Google Logo Image">
+            <img class="logo-img" src="./images/Foolgle.png" alt="Foolgle Logo Image">
             <form id="form" onsubmit="searchHandler(event)"></form>
             <div class="search-bar">
                 <span class="material-icons">search</span>
                 <input id="search-input" class="search-input" type="text">
             </div>
             <div class="search-btns">
-                <input type="submit" value="Foolgle Search">
-                <input type="button" value="I'm Feeling Lucky!">
+                <input id="submit" type="submit" value="Foolgle Search">
+                <input id="feelingLucky" type="submit" value="First Result, Please!">
             </div>
         </form>
         </div>
@@ -90,5 +91,3 @@
     </footer>
 
 </body>
-
-<script src="./scripts.js"></script>
