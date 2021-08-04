@@ -44,11 +44,10 @@ let finalResult;
 
 
 //RELOAD PAGE FUNC
-function luckyWebsiteReroute(event) {
-    event.preventDefault()
-    searchHandlerOne(event)
-    window.location.replace(`${finalResult}`);
-}
+// function luckyWebsiteReroute(event) {
+//     searchHandlerOne(event)
+//     window.location.replace(`${finalResult}`);
+// }
 
 //searches for one result
 function searchHandlerOne(event){
@@ -69,10 +68,10 @@ function searchHandlerOne(event){
 //gives back top url
 function sortResult(data) {
     //get top result
-    finalResult = `${data.items[i].formattedUrl}`
+
+    finalResult = `${data.items[0].link}`
+    console.log(finalResult)
 } 
-
-
 
 
 
@@ -84,7 +83,8 @@ let API_KEY = 'AIzaSyBLQ6G4cY74__pZ0pfUiBV7qlBgxbssheo'
 //watch for submission of form
 const form = document.getElementById('form');
 form.addEventListener('submit', handleSubmitReload);
-//form.addEventListener('click', luckyWebsiteReroute )
+const myBtn = document.getElementById('feelingLucky')
+myBtn.addEventListener('submit', searchHandlerOne )
 
 //module.exports = {
     //searchHandler
