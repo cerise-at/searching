@@ -70,7 +70,7 @@ function sortResult(data) {
     //get top result
 
     finalResult = `${data.items[0].link}`
-    console.log(finalResult)
+    window.location.replace(`${finalResult}`)
 } 
 
 
