@@ -1,7 +1,8 @@
-//import {searchHandler, searchHandlerOne} from'/handlers.js';
+import { Result,finalResults,finalResult,cx,API_KEY } from '/data.js';
+
 
 //called when search is pressed
-function searchHandler(event){
+export function searchHandler(event){
     event.preventDefault();
     //get search value
     let search = document.getElementById('searchInput').value;
@@ -18,7 +19,7 @@ function searchHandler(event){
 }
 
 //adds results to new object
-function sortResults(data) {
+export function sortResults(data) {
     console.log(data)
     //loop over first 10 results and add to final results object
     for(let i=0; i< 10; i++) {
@@ -26,12 +27,11 @@ function sortResults(data) {
             a = new Result(`${data.items[i].title}`, `${data.items[i].snippet}`, `${data.items[i].formattedUrl}`);
             finalResults[i] = a
     } 
-    console.log(finalResults)
 }
 
 
 //searches for one result
-function searchHandlerOne(event){
+export function searchHandlerOne(event){
     event.preventDefault();
     //get search value
     let search = document.getElementById('searchInput').value;
@@ -47,25 +47,22 @@ function searchHandlerOne(event){
 }
 
 //gives back top url
-function sortResult(data) {
+export function sortResult(data) {
     //get top result
     finalResult = `${data.items[0].link}`;
     window.location.replace(`${finalResult}`)
 } 
 
-function loadResults(finalResults) {
-    // let results = document.getElementById('searchresultsarea')
+export function loadResults(finalResults) {
+    let results = document.getElementById('searchresultsarea')
     for (let i = 0; i <10; i++){
-        let title = finalResults[i].title 
-        title = title.link(finalResults[i].formattedUrl)
-        document.getElementById('title').textContent = title.link(finalResults[i].formattedUrl)
-        let snippet = finalResults[i].snippet
-        document.getElementById('snippet').textContent = snippet
+        let title = finalResults
     }
 
 }
 
-class Result {
+// class to put results in 
+export class Result {
     constructor(title, snippet, formattedUrl){
     this.title = title;
     this.snippet = snippet;
@@ -73,15 +70,16 @@ class Result {
     }
 }
 
-let finalResults = {}
-let finalResult;
+//object for all the results to be wrapped in
+export let finalResults = {}
+export let finalResult;
 
-let cx = '6bec81dadc88ed1d3'
-let API_KEY = 'AIzaSyDV7_ce9jjLQav6yqL_IPHm0PjXW-eXBtM'
+export let cx = '6bec81dadc88ed1d3'
+export let API_KEY = 'AIzaSyDV7_ce9jjLQav6yqL_IPHm0PjXW-eXBtM'
 
-//watch for submission of form
-const form = document.getElementById('form');
-form.addEventListener('submit', searchHandler);
-const myBtn = document.getElementById('feelingLucky');
-myBtn.addEventListener('submit', searchHandlerOne );
-
+//module.exports = {
+//     searchHandler,
+//     sortResults,
+//     searchHandlerOne,
+//     sortResult
+// }

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -41,16 +42,16 @@
     <section class="content-section">
         <div class="content-wrapper">
             <img class="logo-img" src="./images/Foolgle.png" alt="Foolgle Logo Image">
-            <form id="form" onsubmit="searchHandler(event)"></form>
-            <div class="search-bar">
-                <span class="material-icons">search</span>
-                <input id="search-input" class="search-input" type="text">
-            </div>
-            <div class="search-btns">
-                <input type="submit" value="Foolgle Search">
-                <input id="feelingLucky" type="submit" onclick="searchHandlerOne(event)"  value="First Result, Please!">
-            </div>
-        </form>
+            <form id="form" onsubmit="searchHandler(event)">
+                <div class="search-bar">
+                    <span class="material-icons">search</span>
+                    <input id="searchInput" class="search-input" type="text">
+                </div>
+                <div class="search-btns">
+                    <input id="submit" type="submit" value="Foolgle Search">
+                    <input id="feelingLucky" type="submit" onsubmit="searchHandlerOne(event)"  value="First Result, Please!">
+                </div>
+            </form>
         </div>
     </section>
 
@@ -88,7 +89,7 @@
         </ul>
     </div>
     </footer>
-<script src="./scripts.js"></script>
+    <script src="./scripts.js"></script>
 </body>
 
 
