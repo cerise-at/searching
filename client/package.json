@@ -2,10 +2,14 @@
   "name": "cerise_and_simon",
   "version": "1.0.0",
   "description": "Search engine ",
-  "main": "index.js",
+  "main": "scripts.js",
   "scripts": {
     "test": "jest"
   },
+"test" : {
+  "testEnvironment" : "jsdom"
+},
+
   "author": "Cerise and Simon",
   "license": "ISC"
 }

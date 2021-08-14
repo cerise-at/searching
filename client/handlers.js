@@ -4,6 +4,7 @@ import { Result,finalResults,finalResult,cx,API_KEY } from '/data.js';
 //called when search is pressed
 export function searchHandler(event){
     event.preventDefault();
+    window.location.href = "search.html";
     //get search value
     let search = document.getElementById('searchInput').value;
     console.log(search)
